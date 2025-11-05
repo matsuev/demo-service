@@ -1,16 +1,13 @@
 package main
 
 import (
-	"log"
 	"net/http"
 )
 
 func main() {
 	http.HandleFunc("/", rootHandler)
 
-	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatalln()
-	}
+	http.ListenAndServe(":8080", nil)
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
