@@ -1,0 +1,16 @@
+services:
+  goservice-01:
+    image: goservice:latest
+    environment:
+      - DB_HOST=172.0.0.15
+      - DB_PORT=9876
+      - DB_USER=admin
+      - DB_PASS=password
+  
+  goservice-02:
+    image: goservice:latest
+    environment:
+      - DB_HOST=192.168.0.1
+      - DB_PORT=5432
+      - DB_USER=testuser
+      - DB_PASS=testpass
